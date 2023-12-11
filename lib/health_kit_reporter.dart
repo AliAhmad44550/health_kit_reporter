@@ -136,7 +136,8 @@ class HealthKitReporter {
   /// inside [HealthKit].
   /// Provide the [predicate] to set the date interval.
   ///
-  static StreamSubscription<dynamic> observerQuery(List<String> identifiers, Predicate? predicate, {required Function(Map) onUpdate}) {
+  static StreamSubscription<dynamic> observerQuery(List<String> identifiers, Predicate? predicate,
+      {required Function(Map<String, dynamic>?) onUpdate}) {
     final arguments = <String, dynamic>{
       'identifiers': identifiers,
     };
